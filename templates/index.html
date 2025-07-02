@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message Fraud Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body style="background: url('{{ url_for('static', filename='bg.jpeg') }}') center/cover no-repeat fixed;">
+  <div class="header">
+    <h1>🕵️‍♂️ Message Fraud Detection System</h1>
+    <p>Enter your message below and click “Analyze.”</p>
+  </div>
+
+  <div class="description">
+        <div class="profile-photo">
+          <img src="{{ url_for('static', filename='zahed1.png') }}" alt="Your Photo"/>
+        </div>
+        <h2>Zahed Rafik Shaikh</h2>
+        <p>A project to analyze messages for fraudulent content using modern techniques.</p>
+    </div>
+
+  <div class="container">
+    <form id="messageForm">
+      <textarea id="message" placeholder="Enter your message here..."></textarea>
+      <button type="submit">Analyze</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
